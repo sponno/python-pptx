@@ -4,16 +4,7 @@
 
 import sys
 
-import collections
-
-try:
-    Container = collections.abc.Container
-    Mapping = collections.abc.Mapping
-    Sequence = collections.abc.Sequence
-except AttributeError:
-    Container = collections.Container
-    Mapping = collections.Mapping
-    Sequence = collections.Sequence
+from collections.abc import Container, Mapping, Sequence
 
 if sys.version_info >= (3, 0):
     from .python3 import (  # noqa
